@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <title>Central DJG Aluguéis · Demonstração</title>
+  <link rel="icon" href="marca_dagua_gislaine.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><img src="marca_dagua_gislaine.png" alt="Marca oficial de Gislaine"><div><strong>Sombra</strong><span>Estratégia Inteligente</span><small>DJG Aluguéis</small></div></div>
+      <div class="nav-label">APRESENTAÇÃO</div>
+      <nav id="nav" aria-label="Áreas da demonstração">
+        <a href="#inicio" data-view="inicio">▦ <span>Visão geral</span></a>
+        <a href="#imoveis" data-view="imoveis">⌂ <span>Carteira e filtros</span></a>
+        <a href="#dossie" data-view="dossie">◈ <span>Imóvel 360°</span></a>
+        <a href="#contratos" data-view="contratos">▤ <span>Contratos</span></a>
+        <a href="#recebimentos" data-view="recebimentos">↧ <span>Recebimentos</span></a>
+        <a href="#custos" data-view="custos">◫ <span>Custos e deveres</span></a>
+        <a href="#importar" data-view="importar">⇧ <span>Importar arquivos</span></a>
+        <a href="#inventario" data-view="inventario">≡ <span>Inventário da migração</span></a>
+        <a href="#auditoria" data-view="auditoria">◷ <span>Auditoria</span></a>
+      </nav>
+      <p class="nav-hint">Deslize para ver as demais áreas →</p>
+      <div class="sidebar-foot">Gislaine Araujo Silva<br><small>Prévia pública · dados fictícios</small></div>
+    </aside>
+    <div class="content">
+      <header class="topbar"><div><span class="eyebrow">SOMBRA ESTRATÉGIA INTELIGENTE / DJG ALUGUÉIS</span><strong id="path">Visão geral</strong></div><span class="owner">Gislaine Araujo Silva</span></header>
+      <main>
+        <div class="demo-banner" role="status"><strong>DEMONSTRAÇÃO · DADOS FICTÍCIOS</strong><span>Esta prévia é interativa, mas não possui login, banco de dados, documentos reais, importação ou efeito financeiro.</span></div>
+        <section id="inicio" class="view" aria-labelledby="inicio-title">
+          <div class="pagehead"><div><span class="eyebrow">CENTRAL DE CONTROLE</span><h1 id="inicio-title">Uma visão do trabalho, com cada fonte no seu lugar</h1><p>Imóvel, contrato, competência e caixa aparecem separados. Nesta prévia, todos os registros são inventados.</p></div></div>
+          <div class="metrics"><article class="metric"><span>Imóveis ilustrativos</span><strong>3</strong><small>IDs DEMO</small></article><article class="metric"><span>Contratos em proposta</span><strong>3</strong><small>Sem ativação</small></article><article class="metric"><span>Recebimento informado</span><strong>1</strong><small>Sem extrato</small></article><article class="metric"><span>Custos informados</span><strong>4</strong><small>Responsabilidade a conferir</small></article></div>
+          <div class="grid two"><article class="card"><h2>Fluxo previsto</h2><ol class="steps"><li>Identificar imóvel e unidade por ID próprio.</li><li>Vincular contrato e documento com versão e fonte.</li><li>Separar custos, consumo e obrigações.</li><li>Confrontar recebimento informado com extrato da conta correta.</li><li>Registrar decisão humana e histórico.</li></ol></article><article class="card"><h2>Estado desta apresentação</h2><p>A navegação, os filtros e a consulta do imóvel usam apenas dados de exemplo incorporados nesta página. Os recursos de gravação aparecem como etapas previstas, sem simular que foram executados.</p><a class="button primary" href="#imoveis">Explorar imóveis fictícios</a><p class="small">A Central operacional local, o acervo e a homologação têm evidências separadas. Este link não dá acesso a eles.</p></article></div>
+        </section>
+        <section id="imoveis" class="view" aria-labelledby="imoveis-title">
+          <div class="pagehead"><div><span class="eyebrow">CARTEIRA</span><h1 id="imoveis-title">Imóveis e unidades</h1><p>Busque os três imóveis inventados. O filtro funciona somente nesta página, sem gravar dados.</p></div></div>
+          <div class="card"><div class="filters"><label>Busca por ID, endereço ou locatário<input id="property-query" type="search" placeholder="Ex.: DEMO-LOJA-01"></label><label>Situação<select id="property-status"><option value="">Todas</option><option value="PROPOSTA">Com proposta</option><option value="ATIVO">Ativo aprovado</option></select></label></div><div class="tablewrap"><table><thead><tr><th>ID</th><th>Endereço fictício / unidade</th><th>Locatário fictício</th><th>Estado</th><th></th></tr></thead><tbody id="properties-body"></tbody></table></div><p id="properties-count" class="small"></p></div>
+        </section>
+        <section id="dossie" class="view" aria-labelledby="dossie-title">
+          <div class="pagehead"><div><span class="eyebrow">VÍNCULO PELO ID</span><h1 id="dossie-title">Imóvel 360°</h1><p>O mesmo imóvel reúne propostas, recebimentos informados e custos, com estados distintos.</p></div></div>
+          <div class="card"><label class="dossier-select">Imóvel fictício<select id="dossier-property"></select></label><div id="dossier-content"></div></div>
+        </section>
+        <section id="contratos" class="view" aria-labelledby="contratos-title">
+          <div class="pagehead"><div><span class="eyebrow">DOCUMENTO E VIGÊNCIA</span><h1 id="contratos-title">Contratos em proposta</h1><p>Valores e datas abaixo são exemplos, sem assinatura ou validade documental.</p></div></div>
+          <div class="card"><div class="tablewrap"><table><thead><tr><th>Proposta</th><th>Imóvel</th><th>Locatário fictício</th><th>Início informado</th><th>Aluguel ilustrativo</th><th>Estado</th></tr></thead><tbody id="contracts-body"></tbody></table></div></div><div class="notice">Importar, revisar ou ativar contratos exige documento, identidade, vigência e decisão humana no ambiente operacional. Nenhum contrato está ativo nesta prévia.</div>
+        </section>
+        <section id="recebimentos" class="view" aria-labelledby="recebimentos-title">
+          <div class="pagehead"><div><span class="eyebrow">COMPETÊNCIA E CAIXA</span><h1 id="recebimentos-title">Recebimentos informados</h1><p>Uma linha de controle não prova depósito, quitação ou baixa.</p></div></div>
+          <div class="card"><div class="filters"><label>Competência<input id="receipt-month" type="month" value="2026-10"></label><label>Imóvel<select id="receipt-property"></select></label></div><div class="tablewrap"><table><thead><tr><th>ID</th><th>Imóvel</th><th>Competência</th><th>Caixa informado</th><th>Valor ilustrativo</th><th>Estado</th></tr></thead><tbody id="receipts-body"></tbody></table></div><p id="receipts-count" class="small"></p></div><div class="notice">Conciliação, rateio e reversão requerem extrato da conta correta e revisão do contrato. Esta prévia não recebe extratos nem faz baixa.</div>
+        </section>
+        <section id="custos" class="view" aria-labelledby="custos-title">
+          <div class="pagehead"><div><span class="eyebrow">OBRIGAÇÕES</span><h1 id="custos-title">Custos, consumo e seguros</h1><p>Guia, fatura, apólice, contrato e pagamento são provas diferentes.</p></div></div>
+          <div class="card"><div class="filters"><label>Imóvel<select id="cost-property"></select></label><label>Tipo<select id="cost-kind"><option value="">Todos</option><option value="IPTU">IPTU</option><option value="Água">Água</option><option value="Energia">Energia</option><option value="Seguro">Seguro</option></select></label></div><div class="tablewrap"><table><thead><tr><th>ID</th><th>Imóvel</th><th>Tipo</th><th>Competência</th><th>Valor ilustrativo</th><th>Fonte fictícia</th><th>Responsável</th></tr></thead><tbody id="costs-body"></tbody></table></div><p id="costs-count" class="small"></p></div><div class="notice">A responsabilidade depende de contrato, tipo de despesa e prova. Nenhum custo foi cobrado ou pago nesta prévia.</div>
+        </section>
+        <section id="importar" class="view" aria-labelledby="importar-title">
+          <div class="pagehead"><div><span class="eyebrow">ENTRADA CONTROLADA</span><h1 id="importar-title">Importar arquivos</h1><p>O fluxo local foi testado com arquivos sintéticos. Nesta prévia pública, arquivos não podem ser enviados.</p></div></div>
+          <div class="grid three"><article class="card"><h2>Planilha</h2><p>Original e hash, aba e colunas exatas, prévia linha a linha e decisão de cada item.</p><span class="badge blocked">Desativado nesta prévia</span></article><article class="card"><h2>Contrato</h2><p>Documento original, proposta versionada, vínculo ao imóvel e revisão humana.</p><span class="badge blocked">Desativado nesta prévia</span></article><article class="card"><h2>Aditivo</h2><p>Vínculo à versão exata do contrato base e análise de assinatura e vigência.</p><span class="badge blocked">Desativado nesta prévia</span></article></div><div class="notice">O endereço público desta prévia não tem armazenamento de documentos. Não envie contratos, extratos nem dados pessoais para demonstração.</div>
+        </section>
+        <section id="inventario" class="view" aria-labelledby="inventario-title">
+          <div class="pagehead"><div><span class="eyebrow">ORIGEM E INTEGRIDADE</span><h1 id="inventario-title">Inventário da migração</h1><p>Área reservada para confrontar hashes, caminhos e vínculos de fontes com revisão humana.</p></div></div>
+          <div class="card empty-state"><h2>Acervo real fora desta apresentação</h2><p>Nenhum documento do Dropbox, pacote AppFolio, planilha bancária ou arquivo contratual real é servido neste endereço. A auditoria de fontes permanece em ambiente privado e não aprova automaticamente vínculo, pagamento ou vigência.</p><span class="badge blocked">Consulta desativada nesta prévia</span></div>
+        </section>
+        <section id="auditoria" class="view" aria-labelledby="auditoria-title">
+          <div class="pagehead"><div><span class="eyebrow">RASTREABILIDADE</span><h1 id="auditoria-title">Auditoria</h1><p>O sistema operacional local registra mudanças e motivos; esta prévia pública não grava ações.</p></div></div>
+          <div class="card empty-state"><h2>Nenhum evento operacional aqui</h2><p>Filtros e navegação desta página funcionam no navegador e desaparecem ao atualizar. Não exibimos uma trilha inventada como se fosse registro real.</p><span class="badge blocked">Somente visualização</span></div>
+        </section>
+        <footer>Prévia pública com dados fictícios · Sombra Estratégia Inteligente · DJG Aluguéis · Gislaine Araujo Silva</footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
